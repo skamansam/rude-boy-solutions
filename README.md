@@ -36,3 +36,5 @@ application development.
 > <sup>2</sup>We will use squarespace domains (domains.squarespace.com) to register your website domain. Pricing may vary depending on the name and we will work together to find a name and price that is suitable for you. We may ask for additional fees, as some domains require special setup. For instance, rudeboy.dev (and any site with a .dev suffix) requires special certificates. Additional fees will cover other third-party services, but our fees for work and time will not exceed 100usd.
 
 > <sup>3</sup> We prefer vercel for hosting. We will set up a vercel account for you and give you the credentials and further information. Vercel has basic hosting for free.
+
+> Here are some other good sites - https://www.designrush.com/agency/website-design-development
