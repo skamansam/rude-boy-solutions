@@ -1,15 +1,16 @@
 {
-  "name": "tailcast",
+  "name": "rude-boy-solutions",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "license": "MIT",
-  "description": "Dark themed website template built on AstroJS, designed for fictional startup",
+  "description": "Site for Rude Boy Solutions, creating free custom solutions for your business.",
   "author": {
-    "name": "Mateusz Wyrębek (matt765)",
-    "email": "mateusz.wyrebek@gmail.com",
-    "url": "https://matt765-portfolio.vercel.app/"
+    "name": "Samuel C Tyler (skamansam)",
+    "email": "skamansam@gmail.com",
+    "url": "https://rudeboy.dev/rude-boy-solutions"
   },
   "private": true,
+  "packageManager": "pnpm@9.11.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
