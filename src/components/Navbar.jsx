@@ -5,11 +5,23 @@ import { TailcastLogo } from "../assets/logos/TailcastLogo";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
 const navbarLinks = [
-  { label: "Home", href: "/#home", ariaLabel: "Home" },
-  { label: "Features", href: "/#features", ariaLabel: "Features" },
-  { label: "Pricing", href: "/#pricing", ariaLabel: "Pricing" },
-  { label: "Feedback", href: "/#feedback", ariaLabel: "Feedback" },
-  { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
+  { label: "Home", href: "/rude-boy-solutions/#home", ariaLabel: "Home" },
+  {
+    label: "Features",
+    href: "/rude-boy-solutions/#features",
+    ariaLabel: "Features",
+  },
+  {
+    label: "Pricing",
+    href: "/rude-boy-solutions/#pricing",
+    ariaLabel: "Pricing",
+  },
+  {
+    label: "Feedback",
+    href: "/rude-boy-solutions/#feedback",
+    ariaLabel: "Feedback",
+  },
+  { label: "FAQ", href: "/rude-boy-solutions/#FAQ", ariaLabel: "FAQ" },
 ];
 
 export const Navbar = () => {
@@ -27,7 +39,7 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <a href="/#home" aria-label="Home">
+          <a href="/rude-boy-solutions/#home" aria-label="Home">
             <div className="flex justify-start items-center grow basis-0">
               <div className="text-white mr-2 text-6xl">
                 <TailcastLogo />
@@ -95,7 +107,7 @@ export const Navbar = () => {
             exit={{ opacity: 0 }}
           >
             <div
-              className="flex flex-col mt-16 lg:hidden absolute top-4 left-0  bg-bgDark1 z-50 w-full 
+              className="flex flex-col mt-16 lg:hidden absolute top-4 left-0  bg-bgDark1 z-50 w-full
         items-center gap-10 pb-10 border-y border-solid border-bgDark3 pt-10
         "
             >
