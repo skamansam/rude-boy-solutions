@@ -5,6 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   integrations: [svelte(), react(), tailwind()],
-  base: "/rude-boy-solutions",
+  base: "/",
   site: "https://rudeboy.dev/rude-boy-solutions",
 });
