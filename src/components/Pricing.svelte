@@ -13,7 +13,6 @@
     ];
     let isMonthly = true;
     const setIsMonthly = (value) => {
-        console.log("Monthly", value);
         isMonthly = value;
     };
     let isModalOpen = true;

@@ -4,7 +4,6 @@
     export let defaultOpen = false;
     let isOpen = defaultOpen;
     const setIsOpen = (value) => {
-        console.log("toggle");
         isOpen = value;
     };
 </script>
