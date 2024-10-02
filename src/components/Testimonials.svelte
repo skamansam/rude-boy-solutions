@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { motion } from "framer-motion";
+    import { M as motion } from "svelte-motion";
 
     import QuoteIcon from "../assets/icons/QuoteIcon.svelte";
     import testimonial1 from "../assets/images/testimonial1.png";

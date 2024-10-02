@@ -1,5 +1,4 @@
 <script lang="ts">
-    // import { useState } from "react";
     import { M as motion, AnimatePresence } from "svelte-motion";
 
     import TailcastLogo from "../assets/logos/TailcastLogo.svelte";
