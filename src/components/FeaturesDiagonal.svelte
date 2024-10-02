@@ -47,7 +47,7 @@
                 </p>
                 <button
                     class="w-[210px] h-12 contained-button mr-10"
-                    onClick={() => setIsModalOpen(true)}
+                    on:click={() => setIsModalOpen(true)}
                     aria-label="Get started"
                 >
                     Get Started

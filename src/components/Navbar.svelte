@@ -118,7 +118,7 @@
                             key={href}
                             class="text-white lg:text-base text-2xl leading-6 mr-4 ml-4 2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition duration-300 h-full pt-2"
                             {href}
-                            onClick={() => setIsOpen(false)}
+                            on:click={() => setIsOpen(false)}
                             aria-label={ariaLabel}
                         >
                             {label}

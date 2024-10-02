@@ -16,11 +16,11 @@
     >
         <div
             class="w-full h-full bg-bgDarkTransparentDarker fixed top-0 left-0 flex z-50 justify-center items-center"
-            onClick={() => setIsOpen(false)}
+            on:click={() => setIsOpen(false)}
         >
             <div
                 class="w-full h-screen sm:h-auto sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] sm:rounded-2xl bg-bgDarkTransparentLighter main-border-gray-darker py-12 px-8 sm:px-16 backdrop-blur-xl fixed sm:mb-8 fixed mx-auto z-50"
-                onClick={(e) => e.stopPropagation()}
+                on:click={(e) => e.stopPropagation()}
             >
                 <div class="flex relative">
                     <div class="w-1/2 hidden lg:inline">
@@ -93,7 +93,7 @@
                     </div>
                     <div
                         class="fixed top-6 right-6 z-50 w-5 h-5 cursor-pointer text-[rgb(255,255,255,0.7)] hover:text-white transition"
-                        onClick={() => setIsOpen(false)}
+                        on:click={() => setIsOpen(false)}
                     >
                         <CloseIcon />
                     </div>

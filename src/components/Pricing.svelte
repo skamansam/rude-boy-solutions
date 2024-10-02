@@ -13,6 +13,7 @@
     ];
     let isMonthly = true;
     const setIsMonthly = (value) => {
+        console.log("Monthly", value);
         isMonthly = value;
     };
     let isModalOpen = true;
@@ -20,6 +21,7 @@
         isModalOpen = value;
     };
     const handleChange = () => {
+        console.info("isMonthly", isMonthly);
         setIsMonthly(!isMonthly);
     };
 </script>
@@ -52,7 +54,7 @@
                             type="checkbox"
                             class="peer appearance-none"
                             checked={!isMonthly}
-                            onChange={handleChange}
+                            on:change={handleChange}
                         />
                         <span
                             class="h-8 w-[5.5rem] flex items-center pr-2 bg-bgDark3 after:rounded-lg duration-300 ease-in-out after:w-[30rem] after:h-10 after:bg-primaryColor after:shadow-md after:duration-300 peer-checked:after:translate-x-[5.5rem] cursor-pointer"
@@ -114,7 +116,7 @@
                             </ul>
                             <button
                                 class="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
-                                onClick={() => setIsModalOpen(true)}
+                                on:click={() => setIsModalOpen(true)}
                                 aria-label="Get started"
                             >
                                 Get Started
@@ -159,7 +161,7 @@
                             </ul>
                             <button
                                 class="inline-block text-center py-2 px-4 w-full contained-button leading-loose transition duration-200 mt-20"
-                                onClick={() => setIsModalOpen(true)}
+                                on:click={() => setIsModalOpen(true)}
                                 aria-label="Get started"
                             >
                                 Get Started
@@ -204,7 +206,7 @@
                             </ul>
                             <button
                                 class="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
-                                onClick={() => setIsModalOpen(true)}
+                                on:click={() => setIsModalOpen(true)}
                                 aria-label="Get started"
                             >
                                 Get Started

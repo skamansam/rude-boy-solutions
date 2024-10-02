@@ -66,14 +66,14 @@
             >
                 <button
                     class="contained-button w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
-                    onClick={() => setIsModalOpen(true)}
+                    on:click={() => setIsModalOpen(true)}
                     aria-label="Get started"
                 >
                     Get Started
                 </button>
                 <button
                     class="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
-                    onClick={() => setIsModalOpen(true)}
+                    on:click={() => setIsModalOpen(true)}
                     aria-label="Live demo"
                 >
                     Live demo

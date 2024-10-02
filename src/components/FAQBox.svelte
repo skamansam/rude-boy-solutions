@@ -4,13 +4,15 @@
     export let defaultOpen = false;
     let isOpen = defaultOpen;
     const setIsOpen = (value) => {
+        console.log("toggle");
         isOpen = value;
     };
 </script>
 
 <div
     class="pt-2 sm:pt-6 pb-2 px-3 sm:px-8 rounded-3xl bg-bgDark3 main-border-gray-darker mb-4 relative hover:bg-bgDark3Hover cursor-pointer transition"
-    onClick={() => setIsOpen(!isOpen)}
+    on:click={() => setIsOpen(!isOpen)}
+    role="button"
 >
     <div class="flex flex-col p-2 justify-center items-start">
         <h3 class=" content-title pt-3 sm:pt-0 pr-8 sm:pr-0">{title}</h3>

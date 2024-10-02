@@ -42,15 +42,11 @@
                     Frequently Asked Questions
                 </h2>
                 <div class="mb-11 flex flex-wrap -m-1">
-                    {#each FAQData as item, index}
-                        <div
-                            class="w-full p-1"
-                            key={`${item.question}-${index}`}
-                        >
+                    {#each FAQData as item, index (`${item.question}-${index}`)}
+                        <div class="w-full p-1">
                             <FAQBox
                                 title={item.question}
                                 content={item.answer}
-                                key={`${item.question}-${item.answer}`}
                                 defaultOpen={index === 0}
                             />
                         </div>
