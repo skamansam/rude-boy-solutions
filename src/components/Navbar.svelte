@@ -24,7 +24,9 @@
         { label: "FAQ", href: "/rude-boy-solutions/#FAQ", ariaLabel: "FAQ" },
     ];
     let isOpen = false;
-    let setIsOpen = false;
+    const setIsOpen = (value) => {
+        isOpen = value;
+    };
 </script>
 
 <nav
@@ -46,7 +48,7 @@
                         <TailcastLogo />
                     </div>
                     <div class="text-white font-['Inter'] font-bold text-xl">
-                        Tailcast
+                        Rude Boy Solutions
                     </div>
                 </div>
             </a>

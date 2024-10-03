@@ -3,6 +3,8 @@
 
     import InvitationModal from "./InvitationModal.svelte";
     import dashboard from "../assets/images/dashboard.jpg";
+    import MobileImage from "../assets/images/undraw_apps.svg";
+    import DesktopImage from "../assets/images/undraw_website.svg";
     export let isModalOpen = false;
     export let setIsModalOpen = (value) => {
         isModalOpen = value;
@@ -24,7 +26,7 @@
             <h3
                 class="text-secondaryColor text-sm sm:text-base mb-6 sm:mt-32 mt-16 font-bold"
             >
-                Discover new data flow
+                Solutions for a Problematic World
             </h3>
         </motion.div>
         <motion.div
@@ -35,13 +37,15 @@
             <div
                 class="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-primaryText px-8 sm:px-8 md:px-20 lg:px-4"
             >
-                <h1 class="inline md:hidden">Analytics</h1>
-                <h1 class="hidden md:inline">Analytic tools suite</h1>
+                <h1 class="inline md:hidden">Free Web Site</h1>
+                <h1 class="hidden md:inline">
+                    Free Web Site For Your Business!
+                </h1>
             </div>
             <h1
-                class="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-primaryText px-8 sm:px-20 md:px-24 lg:px-24"
+                class="md:hidden mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-primaryText px-8 sm:px-20 md:px-24 lg:px-24"
             >
-                for developers
+                for your business!
             </h1>
         </motion.div>
         <motion.div
@@ -52,8 +56,9 @@
             <h2
                 class="text-secondaryText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48"
             >
-                Experience seamless business integrations and powerful insights
-                with our cutting-edge analytic tools.
+                Rude Boy Solutions will create your next web presence for free!
+                You heard that right - get a single page web presence for
+                absolutely nothing!
             </h2>
         </motion.div>
         <motion.div
@@ -65,19 +70,19 @@
                 class="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center"
             >
                 <button
-                    class="contained-button w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
+                    class="contained-button w-64 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0 md:px-0"
                     on:click={() => setIsModalOpen(true)}
                     aria-label="Get started"
                 >
-                    Get Started
+                    Contact Us to Get Started
                 </button>
-                <button
+                <!-- <button
                     class="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
                     on:click={() => setIsModalOpen(true)}
                     aria-label="Live demo"
                 >
                     Live demo
-                </button>
+                </button> -->
             </div>
         </motion.div>
         <motion.div
@@ -85,12 +90,35 @@
             animate={{ opacity: 1, y: 0, zIndex: 20 }}
             transition={{ duration: 0.5, delay: 0.15 }}
         >
-            <div class="relative w-screen flex justify-center">
+            <!-- <div class="relative w-screen flex justify-center">
                 <img
-                    src={dashboard.src}
+                    src={mobile.src}
                     alt="Dashboard image"
                     class="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
                 />
+            </div> -->
+            <div class="relative w-screen flex justify-center mb-3 h-32">
+                <!-- <MobileImage
+                    class="inline md:hidden w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+                />
+                <DesktopImage
+                    class="hidden md:inline w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+                /> -->
+                <img
+                    src={MobileImage.src}
+                    alt="Dashboard image"
+                    class="block md:hidden w-4/5 max-h-56 mx-auto absolute z-10 top-20"
+                />
+                <img
+                    src={DesktopImage.src}
+                    alt="Dashboard image"
+                    class="hidden md:block w-3/5 2xl:w-[1200px] mx-auto absolute z-10 lg:top-6 xl:top-0"
+                />
+                <!-- <img
+                    src={dashboard.src}
+                    alt="Dashboard image"
+                    class="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+                /> -->
             </div>
         </motion.div>
         <div class="relative w-screen flex justify-center">
@@ -112,7 +140,5 @@
             </div>
         </div>
     </div>
-    {#if isModalOpen}
-        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
-    {/if}
+    <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
 </section>

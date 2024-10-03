@@ -4,10 +4,13 @@
     import CheckArrowIcon from "../assets/icons/CheckArrowIcon.svelte";
     import CloseIcon from "../assets/icons/CloseIcon.svelte";
     import TailcastLogo from "../assets/logos/TailcastLogo.svelte";
-    export let setIsOpen;
+    export let isOpen = false;
+    export let setIsOpen = (value) => {
+        isOpen = value;
+    };
 </script>
 
-<AnimatePresence>
+<AnimatePresence show={isOpen}>
     <motion.div
         initial={{ opacity: 0, zIndex: 50 }}
         animate={{ opacity: 1, zIndex: 50 }}
@@ -27,26 +30,30 @@
                         <h2
                             class="mt-6 mb-2 text-5xl font-bold tracking-normal text-primaryText"
                         >
-                            Subscribe Now
+                            Contact Us Now!
                         </h2>
                         <h2
-                            class="text-5xl font-bold tracking-normal text-secondaryColor"
+                            class="text-3xl font-bold tracking-normal text-secondaryColor"
                         >
-                            Winter is coming
+                            Get Your Presence Today!
                         </h2>
 
                         <ul class="mb-6 text-primaryText mt-12">
                             <li class="mb-4 flex">
                                 <CheckArrowIcon />
-                                <span>Vestibulum viverra</span>
+                                <span>Free One Page Presence</span>
                             </li>
                             <li class="mb-4 flex">
                                 <CheckArrowIcon />
-                                <span>Morbi mollis metus pretium</span>
+                                <span>Free Source Code</span>
                             </li>
                             <li class="mb-4 flex">
                                 <CheckArrowIcon />
-                                <span>Etiam lectus nunc, commodo</span>
+                                <span>Free Search Engine Optimization</span>
+                            </li>
+                            <li class="mb-4 flex">
+                                <CheckArrowIcon />
+                                <span>Free Automatic Deployments</span>
                             </li>
                         </ul>
                     </div>
@@ -62,14 +69,14 @@
                             <div
                                 class="text-white font-['Inter'] font-bold text-3xl"
                             >
-                                Tailcast
+                                Rude Boy Enterprises
                             </div>
                         </div>
 
                         <h3
                             class="mb-7 text-2xl text-primaryText font-bold leading-snug text-center"
                         >
-                            Join 3,953 other developers
+                            Watch your business grow with us!
                         </h3>
                         <div class="flex flex-wrap -m-2">
                             <div class="w-full sm:w-4/5 p-2 mx-auto">
