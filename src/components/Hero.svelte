@@ -98,12 +98,6 @@
                 />
             </div> -->
             <div class="relative w-screen flex justify-center mb-3 h-32">
-                <!-- <MobileImage
-                    class="inline md:hidden w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
-                />
-                <DesktopImage
-                    class="hidden md:inline w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
-                /> -->
                 <img
                     src={MobileImage.src}
                     alt="Dashboard image"
@@ -114,11 +108,6 @@
                     alt="Dashboard image"
                     class="hidden md:block w-3/5 2xl:w-[1200px] mx-auto absolute z-10 lg:top-6 xl:top-0"
                 />
-                <!-- <img
-                    src={dashboard.src}
-                    alt="Dashboard image"
-                    class="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
-                /> -->
             </div>
         </motion.div>
         <div class="relative w-screen flex justify-center">

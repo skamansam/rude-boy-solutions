@@ -25,27 +25,36 @@
                 <div
                     class="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset"
                 >
-                    <span class="block-subtitle">Embrace Innovation</span>
+                    <span class="block-subtitle">Embrace Open Source</span>
                     <h2 class="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-                        Unlike any tool you used before
+                        Is this really free?
                     </h2>
                     <p class="mb-10 text-secondaryText leading-loose">
-                        Discover a new level of data analysis with our
-                        innovative and user-friendly platform. Transform your
-                        business needs with actionable insights.
+                        YES! This service is really free. We believe that by
+                        offering this service for free, we can help more people
+                        to make a better web for others. We also believe that by
+                        offering this service for free, you will be more likely
+                        to hire us for more serious projects in the future.
                     </p>
                     <ul class="mb-6 text-primaryText">
                         <li class="mb-4 flex">
                             <CheckArrowIcon />
-                            <span>Real-time data visualization</span>
+                            <span>Free single-page web site.</span>
                         </li>
                         <li class="mb-4 flex">
                             <CheckArrowIcon />
-                            <span>Advanced predictive analytics</span>
+                            <span
+                                >Free source code via GitHub. Your site, your
+                                code.</span
+                            >
                         </li>
                         <li class="mb-4 flex">
                             <CheckArrowIcon />
-                            <span>Seamless integration with APIs</span>
+                            <span>Free Search Engine Optimization (SEO).</span>
+                        </li>
+                        <li class="mb-4 flex">
+                            <CheckArrowIcon />
+                            <span>Free Social Media Optimizations.</span>
                         </li>
                     </ul>
                 </div>
