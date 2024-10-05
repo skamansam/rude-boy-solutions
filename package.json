@@ -23,6 +23,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/inter": "^5.0.18",
     "@iconify/svelte": "^4.0.2",
+    "@supabase/supabase-js": "^2.45.4",
     "astro": "^4.9.2",
     "npm": "^10.8.1",
     "npm-check-updates": "^16.14.20",
@@ -30,5 +31,8 @@
     "svelte-motion": "^0.12.2",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "supabase": "^1.200.3"
   }
 }
