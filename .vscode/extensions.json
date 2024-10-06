@@ -1,6 +1,5 @@
 {
-    "recommendations": [
-        "svelte.svelte-vscode",
-        "astro-build.astro-vscode"
-    ]
+  "recommendations": [
+    "denoland.vscode-deno"
+  ]
 }
