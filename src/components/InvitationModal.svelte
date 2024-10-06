@@ -1,6 +1,6 @@
 <script lang="ts">
     import { M as motion, AnimatePresence } from "svelte-motion";
-
+    import { onMount } from "svelte";
     import CheckArrowIcon from "../assets/icons/CheckArrowIcon.svelte";
     import CloseIcon from "../assets/icons/CloseIcon.svelte";
     import TailcastLogo from "../assets/logos/TailcastLogo.svelte";
@@ -17,13 +17,12 @@
         transition={{ duration: 0.1 }}
         exit={{ opacity: 0 }}
     >
-        <div
+        <dialog
+            open={isOpen}
             class="w-full h-full bg-bgDarkTransparentDarker fixed top-0 left-0 flex z-50 justify-center items-center"
-            on:click={() => setIsOpen(false)}
         >
             <div
                 class="w-full h-screen sm:h-auto sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] sm:rounded-2xl bg-bgDarkTransparentLighter main-border-gray-darker py-12 px-8 sm:px-16 backdrop-blur-xl fixed sm:mb-8 fixed mx-auto z-50"
-                on:click={(e) => e.stopPropagation()}
             >
                 <div class="flex relative">
                     <div class="w-1/2 hidden lg:inline">
@@ -42,6 +41,10 @@
                             <li class="mb-4 flex">
                                 <CheckArrowIcon />
                                 <span>Free One Page Presence</span>
+                            </li>
+                            <li class="mb-4 flex">
+                                <CheckArrowIcon />
+                                <span>Free Accessibility</span>
                             </li>
                             <li class="mb-4 flex">
                                 <CheckArrowIcon />
@@ -78,34 +81,77 @@
                         >
                             Watch your business grow with us!
                         </h3>
-                        <div class="flex flex-wrap -m-2">
-                            <div class="w-full sm:w-4/5 p-2 mx-auto">
-                                <input
-                                    class="px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
-                                    id="newsletterInput3-1"
-                                    type="text"
-                                    placeholder="Your email address"
-                                />
+                        <form
+                            action="https://yznbyxiwsnxcjpqztpex.supabase.co/functions/v1/resend"
+                            class="infoForm"
+                            novalidate
+                            formmethod="dialog"
+                        >
+                            <div class="flex flex-wrap -m-2">
+                                <div class="w-full sm:w-4/5 p-2 mx-auto">
+                                    <input
+                                        class="px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 invalid:ring-red-300 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
+                                        id="newsletterInputName"
+                                        type="text"
+                                        name="name"
+                                        placeholder="Your name"
+                                        required="required"
+                                        novalidate
+                                        pattern="\w+"
+                                        autofocus
+                                    />
+                                </div>
+                                <div class="w-full sm:w-4/5 p-2 mx-auto">
+                                    <input
+                                        class="px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
+                                        id="newsletterInputEmail"
+                                        type="email"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{'{2,}'}$"
+                                        name="email"
+                                        placeholder="Your email address"
+                                        required="required"
+                                        novalidate
+                                    />
+                                </div>
+                                <div class="w-full sm:w-4/5 p-2 mx-auto">
+                                    <textarea
+                                        class="px-4 py-4 w-full h-32 text-gray-500 font-medium placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 invalid:ring-red-300 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
+                                        id="newsletterInputMessage"
+                                        type="text"
+                                        name="message"
+                                        rows="4"
+                                        placeholder="What kind of presence would you like?"
+                                        required="required"
+                                        novalidate
+                                        pattern="\w+"
+                                    />
+                                </div>
+                                <div class="w-full sm:w-4/5 p-2 mt-4 mx-auto">
+                                    <button
+                                        class="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200 infoForm-invalid:pointer-events-none infoForm-invalid:opacity-30"
+                                        type="submit"
+                                        aria-label="Join now"
+                                    >
+                                        Contact Us!
+                                    </button>
+                                </div>
                             </div>
-                            <div class="w-full sm:w-4/5 p-2 mt-4 mx-auto">
-                                <button
-                                    class="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200"
-                                    type="button"
-                                    aria-label="Join now"
-                                >
-                                    Join Now
-                                </button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                     <div
                         class="fixed top-6 right-6 z-50 w-5 h-5 cursor-pointer text-[rgb(255,255,255,0.7)] hover:text-white transition"
                         on:click={() => setIsOpen(false)}
+                        on:keydown={(e) => {
+                            if (e.key === "Enter") setIsOpen(false);
+                        }}
+                        aria-label="Close"
+                        role="button"
+                        tabindex="0"
                     >
                         <CloseIcon />
                     </div>
                 </div>
             </div>
-        </div>
+        </dialog>
     </motion.div>
 </AnimatePresence>

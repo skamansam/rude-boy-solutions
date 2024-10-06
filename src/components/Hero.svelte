@@ -76,13 +76,6 @@
                 >
                     Contact Us to Get Started
                 </button>
-                <!-- <button
-                    class="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
-                    on:click={() => setIsModalOpen(true)}
-                    aria-label="Live demo"
-                >
-                    Live demo
-                </button> -->
             </div>
         </motion.div>
         <motion.div

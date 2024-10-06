@@ -15,7 +15,7 @@
     const setIsMonthly = (value) => {
         isMonthly = value;
     };
-    let isModalOpen = true;
+    let isModalOpen = false;
     const setIsModalOpen = (value) => {
         isModalOpen = value;
     };

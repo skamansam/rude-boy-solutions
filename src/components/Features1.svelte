@@ -1,10 +1,10 @@
 <script lang="ts">
     import { M as motion } from "svelte-motion";
 
-    import feature1 from "../assets/images/feature1.jpg";
-    import feature2 from "../assets/images/feature2.jpg";
-    import feature3 from "../assets/images/feature3.jpg";
-    import feature4 from "../assets/images/feature4.jpg";
+    import meetTheTeam from "../assets/images/undraw_meet_the_team.svg";
+    import openSource from "../assets/images/undraw_open_source.svg";
+    import socialBio from "../assets/images/undraw_social_bio.svg";
+    import accessibleWebBrowsing from "../assets/images/undraw_web_browsing.svg";
     import CheckArrowIcon from "../assets/icons/CheckArrowIcon.svelte";
 </script>
 
@@ -39,7 +39,10 @@
                     <ul class="mb-6 text-primaryText">
                         <li class="mb-4 flex">
                             <CheckArrowIcon />
-                            <span>Free single-page web site.</span>
+                            <span
+                                >Free accessible, mobile-first single-page web
+                                site.</span
+                            >
                         </li>
                         <li class="mb-4 flex">
                             <CheckArrowIcon />
@@ -65,15 +68,15 @@
                 <div class="mb-8 lg:mb-0 w-full sm:w-1/2 px-2 lg:px-0">
                     <div class="mb-4 py-3 pl-3 pr-2 rounded">
                         <img
-                            src={feature1.src}
-                            alt="Feature image 1"
+                            src={meetTheTeam.src}
+                            alt=""
                             class="rounded-xl main-border-gray mx-auto sm:mx-unset"
                             aria-label="Feature image 1"
                         />
                     </div>
                     <div class="py-3 pl-3 pr-2 rounded">
                         <img
-                            src={feature2.src}
+                            src={openSource.src}
                             alt="Feature image 2"
                             class="rounded-xl main-border-gray mx-auto sm:mx-unset"
                             aria-label="Feature image 2"
@@ -85,7 +88,7 @@
                 >
                     <div class="mb-4 py-3 pl-3 pr-2 rounded-lg">
                         <img
-                            src={feature3.src}
+                            src={accessibleWebBrowsing.src}
                             alt="Feature image 3"
                             class="rounded-xl main-border-gray"
                             aria-label="Feature image 3"
@@ -93,7 +96,7 @@
                     </div>
                     <div class="py-3 pl-3 pr-2 rounded-lg">
                         <img
-                            src={feature4.src}
+                            src={socialBio.src}
                             alt="Feature image 4"
                             class="rounded-xl main-border-gray"
                             aria-label="Feature image 4"
