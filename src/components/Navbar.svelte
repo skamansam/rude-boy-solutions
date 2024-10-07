@@ -1,7 +1,7 @@
 <script lang="ts">
     import { M as motion, AnimatePresence } from "svelte-motion";
 
-    import TailcastLogo from "../assets/logos/TailcastLogo.svelte";
+    import RbeLogo from "../assets/logos/RbeLogo.svelte";
     import GithubIcon from "../assets/icons/GithubIcon.svelte";
 
     const navbarLinks = [
@@ -44,8 +44,8 @@
         >
             <a href="/rude-boy-solutions/#home" aria-label="Home">
                 <div class="flex justify-start items-center grow basis-0">
-                    <div class="text-white mr-2 text-6xl">
-                        <TailcastLogo />
+                    <div class="mr-2 text-6xl">
+                        <RbeLogo class="w-6 h-6" />
                     </div>
                     <div class="text-white font-['Inter'] font-bold text-xl">
                         Rude Boy Solutions

@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
     import CheckArrowIcon from "../assets/icons/CheckArrowIcon.svelte";
     import CloseIcon from "../assets/icons/CloseIcon.svelte";
-    import TailcastLogo from "../assets/logos/TailcastLogo.svelte";
+    import RbeLogo from "../assets/logos/RbeLogo.svelte";
     export let isOpen = false;
     export let setIsOpen = (value) => {
         isOpen = value;
@@ -67,7 +67,10 @@
                             class="flex inline lg:hidden justify-start items-center grow basis-0 mb-8 pr-6"
                         >
                             <div class="text-white mr-2 text-8xl">
-                                <TailcastLogo />
+                                <RbeLogo
+                                    class="w-16 h-16"
+                                    backgroundColor="rgba(48, 49, 54, 1)"
+                                />
                             </div>
                             <div
                                 class="text-white font-['Inter'] font-bold text-3xl"

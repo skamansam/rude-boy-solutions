@@ -1,7 +1,7 @@
 <script lang="ts">
     import FacebookIcon from "../assets/icons/FacebookIcon.svelte";
     import InstagramIcon from "../assets/icons/InstagramIcon.svelte";
-    import TailcastLogo from "../assets/logos/TailcastLogo.svelte";
+    import RbeLogo from "../assets/logos/RbeLogo.svelte";
     import TwitterIcon from "../assets/icons/TwitterIcon.svelte";
 
     const footerData = [
@@ -37,13 +37,13 @@
                     <div
                         class="flex justify-center lg:justify-start items-center grow basis-0"
                     >
-                        <div class="text-white mr-2 text-6xl">
-                            <TailcastLogo />
+                        <div class="mr-2 text-6xl">
+                            <RbeLogo class="w-12 h-12" />
                         </div>
                         <div
                             class="text-white font-['Inter'] font-bold text-xl"
                         >
-                            Tailcast
+                            Rude Boy Solutions
                         </div>
                     </div>
                     <p

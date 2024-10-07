@@ -5,6 +5,8 @@
     import dashboard from "../assets/images/dashboard.jpg";
     import MobileImage from "../assets/images/undraw_apps.svg";
     import DesktopImage from "../assets/images/undraw_website.svg";
+    import RbeLogo from "../assets/logos/RbeLogo.svelte";
+
     export let isModalOpen = false;
     export let setIsModalOpen = (value) => {
         isModalOpen = value;
@@ -23,9 +25,12 @@
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <h3
-                class="text-secondaryColor text-sm sm:text-base mb-6 sm:mt-32 mt-16 font-bold"
-            >
+            <RbeLogo
+                color="#ccc"
+                backgroundColor="rgb(31, 32, 35)"
+                class="sm:mt-32 mt-16 w-52 h-52"
+            />
+            <h3 class="text-secondaryColor text-sm sm:text-base mb-6 font-bold">
                 Solutions for a Problematic World
             </h3>
         </motion.div>
