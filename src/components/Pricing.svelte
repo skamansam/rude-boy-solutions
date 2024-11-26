@@ -5,23 +5,30 @@
     import CheckArrowIcon from "../assets/icons/CheckArrowIcon.svelte";
 
     const pricingData = [
-        "Seamless integration",
-        "Real-time data visualization",
-        "Advanced predictive analytics",
-        "Collaborative environment",
-        "Responsive customer support",
+        {
+            name: 'Basic Website',
+            items: [
+                { service: 'Single-page Website', price: 'FREE!' },
+                { service: 'SEO Tags', price: 'FREE!' },
+                { service: 'Social Media Integrations', price: 'FREE!' },
+                { service: 'Contact Form (email-only)', price: 'FREE!' },
+                { service: 'Progress Monitoring', price: 'FREE!' }
+            ]
+        },
+        {
+            name: 'Add-ons',
+            items: [
+                { service: 'Google Analytics', price: '100 USD' },
+                { service: 'Wordpress Site', price: '300 USD' },
+                { service: 'Setup Google Services', price: 'Starting at 72 USD/year' },
+                { service: 'Web Domain', price: 'Varies' },
+                { service: 'Web Hosting on the Edge!', price: 'FREE!' }
+            ]
+        }
     ];
-    let isMonthly = true;
-    const setIsMonthly = (value) => {
-        isMonthly = value;
-    };
     let isModalOpen = false;
     const setIsModalOpen = (value) => {
         isModalOpen = value;
-    };
-    const handleChange = () => {
-        console.info("isMonthly", isMonthly);
-        setIsMonthly(!isMonthly);
     };
 </script>
 
@@ -36,182 +43,34 @@
         >
             <div class="container mx-auto px-4">
                 <div class="max-w-2xl mx-auto text-center mb-16">
-                    <span class="block-subtitle">Find Your Perfect Fit</span>
-                    <h2
-                        class="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-primaryText"
-                    >
-                        Choose your best plan
+                    <span class="block-subtitle">Transparent Pricing</span>
+                    <h2 class="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-primaryText">
+                        Our Services & Pricing
                     </h2>
                     <p class="mb-6 text-secondaryText">
-                        Select the plan that suits your needs and benefit from
-                        our analytics tools.
+                        We build your website for FREE because we want to show the world what we can do for you!
                     </p>
-                    <label
-                        class="mx-auto bg-bgDark3 relative flex justify-between items-center group text-xl w-44 h-12 rounded-lg pr-36 pl-1 cursor-pointer"
-                    >
-                        <input
-                            type="checkbox"
-                            class="peer appearance-none"
-                            checked={!isMonthly}
-                            on:change={handleChange}
-                        />
-                        <span
-                            class="h-8 w-[5.5rem] flex items-center pr-2 bg-bgDark3 after:rounded-lg duration-300 ease-in-out after:w-[30rem] after:h-10 after:bg-primaryColor after:shadow-md after:duration-300 peer-checked:after:translate-x-[5.5rem] cursor-pointer"
-                        ></span>
-                        <div
-                            class="flex absolute text-primaryText text-sm font-bold"
-                        >
-                            <div
-                                class={isMonthly
-                                    ? "mr-9 ml-3"
-                                    : "mr-9 ml-3 text-gray-400"}
-                            >
-                                Monthly
-                            </div>
-                            <div class={isMonthly ? "text-gray-400" : ""}>
-                                Yearly
-                            </div>
-                        </div>
-                    </label>
                 </div>
-                <div
-                    class="flex flex-wrap flex-col lg:flex-row -mx-4 items-center mt-20"
-                >
-                    <div
-                        class="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0"
-                    >
-                        <div class="p-8 bg-bgDark3 rounded-3xl">
-                            <h3
-                                class="mb-2 text-xl font-bold font-heading text-primaryText text-left"
-                            >
-                                Beginner
-                            </h3>
-                            <div class="flex justify-start items-end">
-                                <div
-                                    class="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2"
-                                >
-                                    $0
-                                </div>
-                                <div class="text-gray-500">
-                                    {isMonthly ? "/ month" : "/ year"}
-                                </div>
-                            </div>
-                            <p
-                                class="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left"
-                            >
-                                The perfect way to get started and get used to
-                                our tools.
-                            </p>
-                            <ul class="mb-2 2xl:mb-6 text-primaryText">
-                                {#each pricingData as text, index}
-                                    <li
-                                        class="mb-4 flex"
-                                        key={`${text}-${index}`}
-                                    >
-                                        <CheckArrowIcon />
-                                        <span>{text}</span>
-                                    </li>
+                
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    {#each pricingData as category}
+                        <div class="bg-bgDark3 rounded-3xl p-8">
+                            <h3 class="text-2xl font-bold text-primaryText mb-6">{category.name}</h3>
+                            <div class="space-y-4">
+                                {#each category.items as item}
+                                    <div class="flex justify-between items-center text-secondaryText">
+                                        <span class="flex-1">{item.service}</span>
+                                        <span class="font-semibold text-primaryText ml-4">{item.price}</span>
+                                    </div>
                                 {/each}
-                            </ul>
-                            <button
-                                class="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
-                                on:click={() => setIsModalOpen(true)}
-                                aria-label="Get started"
-                            >
-                                Get Started
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0"
-                    >
-                        <div class="px-8 py-8 bg-bgDark3 rounded-3xl">
-                            <h3
-                                class="mb-2 2xl:mb-4 text-2xl font-bold font-heading text-primaryText text-left"
-                            >
-                                Standard
-                            </h3>
-                            <div class="flex justify-start items-end">
-                                <div
-                                    class="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2"
-                                >
-                                    {isMonthly ? "$19" : "$180"}
-                                </div>
-                                <div class="text-gray-500">
-                                    {isMonthly ? "/ month" : "/ year"}
-                                </div>
                             </div>
-                            <p
-                                class="mt-8 mb-8 2xl:mb-12 text-gray-500 leading-loose text-left"
-                            >
-                                Unlock more features and elevate your data
-                                analysis.
-                            </p>
-                            <ul class="mb-14 text-primaryText">
-                                {#each pricingData as text, index}
-                                    <li
-                                        class="mb-4 flex"
-                                        key={`${text}-${index}`}
-                                    >
-                                        <CheckArrowIcon />
-                                        <span>{text}</span>
-                                    </li>
-                                {/each}
-                            </ul>
-                            <button
-                                class="inline-block text-center py-2 px-4 w-full contained-button leading-loose transition duration-200 mt-20"
-                                on:click={() => setIsModalOpen(true)}
-                                aria-label="Get started"
-                            >
-                                Get Started
-                            </button>
                         </div>
-                    </div>
-                    <div
-                        class="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0"
-                    >
-                        <div class="p-8 bg-bgDark3 rounded-3xl">
-                            <h3
-                                class="mb-2 text-xl font-bold font-heading text-primaryText text-left"
-                            >
-                                Premium
-                            </h3>
-                            <div class="flex justify-start items-end">
-                                <div
-                                    class="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2"
-                                >
-                                    {isMonthly ? "$36" : "$390"}
-                                </div>
-                                <div class="text-gray-500">
-                                    {isMonthly ? "/ month" : "/ year"}
-                                </div>
-                            </div>
-                            <p
-                                class="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left"
-                            >
-                                Experience the full power of our analytic
-                                platform
-                            </p>
-                            <ul class="mb-2 2xl:mb-6 text-primaryText">
-                                {#each pricingData as text, index}
-                                    <li
-                                        class="mb-4 flex"
-                                        key={`${text}-${index}`}
-                                    >
-                                        <CheckArrowIcon />
-                                        <span>{text}</span>
-                                    </li>
-                                {/each}
-                            </ul>
-                            <button
-                                class="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
-                                on:click={() => setIsModalOpen(true)}
-                                aria-label="Get started"
-                            >
-                                Get Started
-                            </button>
-                        </div>
-                    </div>
+                    {/each}
+                </div>
+                
+                <div class="mt-12 text-center text-secondaryText">
+                    <p class="mb-4">All payments handled securely through CashApp</p>
+                    <p class="text-sm">Third-party services requiring credit card information will be set up via secure phone or video call</p>
                 </div>
             </div>
         </motion.div>
