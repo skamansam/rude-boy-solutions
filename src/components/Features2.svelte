@@ -25,14 +25,14 @@
                     <div class="mb-4 py-3 md:pl-3 md:pr-20 lg:pr-12 rounded">
                         <img
                             src={web_dev.src}
-                            alt="Feature image 5"
+                            alt="two people working to build a website together"
                             class="rounded-xl main-border-gray"
                         />
                     </div>
                     <div class="py-3 md:pl-20 lg:pl-12 md:pr-2 rounded">
                         <img
                             src={web_search.src}
-                            alt="Feature image 6"
+                            alt="person working on a laptop, with tree graphs in the background"
                             class="rounded-xl main-border-gray"
                         />
                     </div>

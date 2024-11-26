@@ -101,7 +101,6 @@
                                         required="required"
                                         novalidate
                                         pattern="\w+"
-                                        autofocus
                                     />
                                 </div>
                                 <div class="w-full sm:w-4/5 p-2 mx-auto">
@@ -127,7 +126,7 @@
                                         required="required"
                                         novalidate
                                         pattern="\w+"
-                                    />
+                                    ></textarea>
                                 </div>
                                 <div class="w-full sm:w-4/5 p-2 mt-4 mx-auto">
                                     <button

@@ -91,14 +91,15 @@
                 </a>
             </div>
         </motion.div>
-        <div
+        <button
             class="lg:hidden flex flex-col px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-bgDark2"
             on:click={setIsOpen(!isOpen)}
+            aria-label="Open menu"
         >
             <div class="w-5 h-0.5 bg-gray-500 mb-1"></div>
             <div class="w-5 h-0.5 bg-gray-500 mb-1"></div>
             <div class="w-5 h-0.5 bg-gray-500"></div>
-        </div>
+        </button>
     </div>
     <!-- Mobile navbar -->
     <AnimatePresence>

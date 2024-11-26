@@ -26,7 +26,7 @@
 </script>
 
 <section class="w-screen flex justify-center bg-bgDark2 relative">
-    <div class="absolute -top-16" id="pricing" />
+    <div class="absolute -top-16" id="pricing"></div>
     <div class="pb-20 pt-12 bg-bgDark2 2xl:w-[1150px] lg:w-[1050px] md:w-4/5">
         <motion.div
             initial={{ opacity: 0 }}

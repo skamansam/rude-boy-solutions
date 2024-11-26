@@ -98,12 +98,12 @@
             <div class="relative w-screen flex justify-center mb-3 h-32">
                 <img
                     src={MobileImage.src}
-                    alt="Dashboard image"
+                    alt="mobile phone"
                     class="block md:hidden w-4/5 max-h-56 mx-auto absolute z-10 top-20"
                 />
                 <img
                     src={DesktopImage.src}
-                    alt="Dashboard image"
+                    alt="desktop computer"
                     class="hidden md:block w-3/5 2xl:w-[1200px] mx-auto absolute z-10 lg:top-6 xl:top-0"
                 />
             </div>

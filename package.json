@@ -19,20 +19,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/svelte": "^5.7.1",
-    "@astrojs/tailwind": "^5.1.1",
+    "@astrojs/svelte": "^5.7.3",
+    "@astrojs/tailwind": "^5.1.2",
     "@fontsource/inter": "^5.1.0",
     "@iconify/svelte": "^4.0.2",
-    "@supabase/supabase-js": "^2.45.4",
-    "astro": "^4.15.11",
-    "npm": "^10.9.0",
+    "@supabase/supabase-js": "^2.46.1",
+    "astro": "^4.16.14",
+    "npm": "^10.9.1",
     "npm-check-updates": "^16.14.20",
     "svelte": "^4.2.19",
     "svelte-motion": "^0.12.2",
-    "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.2"
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "supabase": "^1.200.3"
+    "supabase": "^1.223.10"
   }
 }

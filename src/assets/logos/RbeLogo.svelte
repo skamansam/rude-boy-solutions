@@ -120,11 +120,11 @@
 
     .inside-circle {
     }
-    .rbe-logo .rotation {
+    /* .rbe-logo .rotation {
         perspective: 10240px;
         transform-style: preserve-3d;
         transform-origin: center center;
-    }
+    } */
     .rbe-logo:hover .inside-box {
         perspective: 600px;
         transform-style: preserve-3d;

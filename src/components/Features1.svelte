@@ -69,7 +69,7 @@
                     <div class="mb-4 py-3 pl-3 pr-2 rounded">
                         <img
                             src={meetTheTeam.src}
-                            alt=""
+                            alt="person looking at wall of people on their social media page"
                             class="rounded-xl main-border-gray mx-auto sm:mx-unset"
                             aria-label="Feature image 1"
                         />
@@ -77,7 +77,7 @@
                     <div class="py-3 pl-3 pr-2 rounded">
                         <img
                             src={openSource.src}
-                            alt="Feature image 2"
+                            alt="people working to build open source project"
                             class="rounded-xl main-border-gray mx-auto sm:mx-unset"
                             aria-label="Feature image 2"
                         />
@@ -89,7 +89,7 @@
                     <div class="mb-4 py-3 pl-3 pr-2 rounded-lg">
                         <img
                             src={accessibleWebBrowsing.src}
-                            alt="Feature image 3"
+                            alt="person in wheel chair using a phone, holding up a piece of a web page"
                             class="rounded-xl main-border-gray"
                             aria-label="Feature image 3"
                         />
@@ -97,7 +97,7 @@
                     <div class="py-3 pl-3 pr-2 rounded-lg">
                         <img
                             src={socialBio.src}
-                            alt="Feature image 4"
+                            alt="person standing beside a large cell phone depicting a biography page"
                             class="rounded-xl main-border-gray"
                             aria-label="Feature image 4"
                         />

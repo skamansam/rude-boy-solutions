@@ -24,7 +24,7 @@
 <section
     class="relative -mt-8 sm:mt-0 pt-12 sm:pt-16 pb-16 bg-blueGray-50 overflow-hidden"
 >
-    <div class="absolute -top-10" id="FAQ" />
+    <div class="absolute -top-10" id="FAQ"></div>
     <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

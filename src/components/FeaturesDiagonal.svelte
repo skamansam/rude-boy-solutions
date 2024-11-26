@@ -58,7 +58,7 @@
             >
                 <img
                     src={featuresdiagonal.src}
-                    alt="Feature image"
+                    alt=""
                     class="rounded-xl main-border-gray"
                 />
             </div>
