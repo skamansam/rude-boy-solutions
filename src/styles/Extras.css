@@ -1,0 +1,39 @@
+@media (prefers-reduced-motion: no-preference) {
+  /* tailwind doesn't have support for timeline animation yet */
+  img {
+    scale: 0.5;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+  @keyframes scroll {
+    to {
+      translate: 100%;
+    }
+  }
+}
+
+.infinite-scroll {
+  @apply w-4/5 overflow-hidden mx-auto;
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+.infinite-scroll > .badge-list {
+  @apply flex animate-[scroll_1s_linear_infinite] flex-nowrap motion-reduce:flex-wrap motion-reduce:items-center motion-reduce:justify-center;
+  translate: 0%;
+  & > * {
+    @apply inline-flex items-center motion-reduce:w-fit motion-reduce:min-w-[10em];
+    &:has(.icon) {
+      @apply motion-reduce:min-w-[8.5em];
+    }
+    & .icon {
+      @apply me-2;
+    }
+  }
+}

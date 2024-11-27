@@ -30,6 +30,15 @@ module.exports = {
         xl: "1280px",      
         "2xl": "1536px",
       },
+      animation: {
+        "fade-in": "fade-in linear forwards",
+        // "scroll": "scroll 20s linear infinite",
+      },
+      keyframes: {
+        "fade-in": {
+          "to": { scale: 1, opacity: 1 },
+        },
+      },
     },
   },
 };
