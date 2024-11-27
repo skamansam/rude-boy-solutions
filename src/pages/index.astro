@@ -12,9 +12,15 @@ import FAQ from "../components/FAQ.svelte";
 // import Blog from "../components/Blog.svelte";
 import Footer from "../components/Footer.svelte";
 import ScrollUpButton from "../components/ScrollUpButton.svelte";
+// import "../lib/Scroller.js";
 import "../styles/Theme.css";
 import "../styles/Diagonals.css";
+import "../styles/Extras.css";
+import PostHog from '../components/PostHog.astro'
 ---
+<head>
+    <PostHog />
+</head>
 
 <Layout title="Rude Boy Solutions">
     <Navbar client:load />
