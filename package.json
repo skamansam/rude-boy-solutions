@@ -24,7 +24,7 @@
     "@fontsource/inter": "^5.1.0",
     "@iconify/svelte": "^4.0.2",
     "@supabase/supabase-js": "^2.46.1",
-    "astro": "^4.16.14",
+    "astro": "^4.16.18",
     "npm": "^10.9.1",
     "npm-check-updates": "^16.14.20",
     "svelte": "^4.2.19",
